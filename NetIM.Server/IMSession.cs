@@ -10,29 +10,19 @@ using SuperSocket.SocketBase.Protocol;
 
 namespace NetIM.Server
 {
-    public class IMSession : AppSession<IMSession>
+    public class IMSession : AppSession<IMSession,BinaryRequestInfo>
     {
+        protected override void HandleUnknownRequest(BinaryRequestInfo requestInfo)
+        {
+            base.HandleUnknownRequest(requestInfo);
+        }
+
         protected override void OnSessionStarted()
         {
-            this.Send("Welcome to SuperSocket Telnet Server");
+            this.Charset = Encoding.UTF8;
+            this.Send("hello");
+            base.OnSessionStarted();
         }
-
-        protected override void HandleUnknownRequest(StringRequestInfo requestInfo)
-        {
-            this.Send("Unknow request");
-        }
-
-        protected override void HandleException(Exception e)
-        {
-            this.Send("Application error: {0}", e.Message);
-        }
-
-        protected override void OnSessionClosed(CloseReason reason)
-        {
-            //add you logics which will be executed after the session is closed
-            base.OnSessionClosed(reason);
-        }
-
         
     }
 }

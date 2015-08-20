@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIM.Client", "NetIM.Clien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIM.Console", "NetIM.Console\NetIM.Console.csproj", "{CD6F0E4E-620F-4189-B668-2F8272D0CCE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIM.IMClient", "NetIM.IMClient\NetIM.IMClient.csproj", "{493362D5-B511-44B9-971A-BE4A65CD0130}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CD6F0E4E-620F-4189-B668-2F8272D0CCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD6F0E4E-620F-4189-B668-2F8272D0CCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD6F0E4E-620F-4189-B668-2F8272D0CCE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493362D5-B511-44B9-971A-BE4A65CD0130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493362D5-B511-44B9-971A-BE4A65CD0130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493362D5-B511-44B9-971A-BE4A65CD0130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493362D5-B511-44B9-971A-BE4A65CD0130}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

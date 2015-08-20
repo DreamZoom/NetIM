@@ -14,20 +14,20 @@ namespace NetIM.SConsole
         {
             Console.WriteLine("Press any key to start the server!");
 
-            Console.ReadKey();
+           // Console.ReadKey();
             Console.WriteLine();
 
             var appServer = new NetIM.Server.IMServer();
            
             //Setup the appServer
-            if (!appServer.Setup(2254)) //Setup with listening port
+            if (!appServer.Setup("127.0.0.1",2254)) //Setup with listening port
             {
                 Console.WriteLine("Failed to setup!");
                 Console.ReadKey();
                 return;
             }
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
             //Try to start the appServer
             if (!appServer.Start())
