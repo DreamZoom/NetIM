@@ -8,7 +8,7 @@ using SuperSocket.ClientEngine.Protocol;
 using SuperSocket.ClientEngine.Proxy;
 using System.Net;
 using System.Net.Sockets;
-
+using NetIM.Models;
 
 namespace NetIM.Client
 {
@@ -18,6 +18,15 @@ namespace NetIM.Client
             :base(remoteEndPoint)
         {
             
+        }
+
+        public void SendTextMessage(string text)
+        {
+            Message msg = new Message();
+            msg.GUID = Guid.NewGuid().ToString();
+            msg.message = text;
+            byte[] bytes = MessageHelper.getBytes(msg);
+            this.Send(bytes,0,bytes.Length);
         }
 
     }
